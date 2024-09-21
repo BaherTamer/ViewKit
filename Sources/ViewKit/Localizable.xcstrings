@@ -1,0 +1,295 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Full Name Must Consist of at Least a First Name and a Last Name" : {
+      "comment" : "Full Name Validator Error",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يجب أن يتكون الاسم الكامل من اسم أول واسم عائلة على الأقل"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Full Name Must Consist of at Least a First Name and a Last Name"
+          }
+        }
+      }
+    },
+    "Full Name Must Contain Only Letters and Spaces" : {
+      "comment" : "Full Name Validator Error",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يجب أن يحتوي الاسم الكامل على حروف ومسافات فقط"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Full Name Must Contain Only Letters and Spaces"
+          }
+        }
+      }
+    },
+    "National Number Must Be Exactly 14 Digits Long" : {
+      "comment" : "National ID Validator Error",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يجب أن يتكون الرقم القومي من 14 رقمًا"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "National Number Must Be Exactly 14 Digits Long"
+          }
+        }
+      }
+    },
+    "National Number Must Contain Only Digits" : {
+      "comment" : "National ID Validator Error",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يجب أن يحتوي الرقم القومي على أرقام فقط"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "National Number Must Contain Only Digits"
+          }
+        }
+      }
+    },
+    "Password Must Be at Least 8 Characters Long" : {
+      "comment" : "Password Validator Error",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يجب ألا يقل طول كلمة المرور عن 8 أحرف"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Password Must Be at Least 8 Characters Long"
+          }
+        }
+      }
+    },
+    "Password Must Contain at Least One Lowercase Letter" : {
+      "comment" : "Password Validator Error",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يجب أن تحتوي كلمة المرور على حرف واحد على الأقل من الأحرف الصغيرة"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Password Must Contain at Least One Lowercase Letter"
+          }
+        }
+      }
+    },
+    "Password Must Contain at Least One Number" : {
+      "comment" : "Password Validator Error",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يجب أن تحتوي كلمة المرور على رقم واحد على الأقل"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Password Must Contain at Least One Number"
+          }
+        }
+      }
+    },
+    "Password Must Contain at Least One Special Character" : {
+      "comment" : "Password Validator Error",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يجب أن تحتوي كلمة المرور على رمز واحد على الأقل"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Password Must Contain at Least One Special Character"
+          }
+        }
+      }
+    },
+    "Password Must Contain at Least One Uppercase Letter" : {
+      "comment" : "Password Validator Error",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يجب أن تحتوي كلمة المرور على حرف واحد على الأقل من الأحرف الكبيرة"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Password Must Contain at Least One Uppercase Letter"
+          }
+        }
+      }
+    },
+    "Password Must Not Contain Spaces" : {
+      "comment" : "Password Validator Error",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يجب ألا تحتوي كلمة المرور على مسافات"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Password Must Not Contain Spaces"
+          }
+        }
+      }
+    },
+    "Phone Number Must Be 11 Digits" : {
+      "comment" : "Phone Number Validator Error",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يجب أن يتكون رقم الهاتف من ١١ رقمًا"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Phone Number Must Be 11 Digits"
+          }
+        }
+      }
+    },
+    "Phone Number Must Begin With 01" : {
+      "comment" : "Phone Number Validator Error",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يجب أن يبدأ رقم الهاتف ب ٠١"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Phone Number Must Begin With 01"
+          }
+        }
+      }
+    },
+    "The Email Address Is Invalid" : {
+      "comment" : "Email Validator Error",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عنوان البريد الإلكتروني غير صالح"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The Email Address Is Invalid"
+          }
+        }
+      }
+    },
+    "The National Number Is Invalid" : {
+      "comment" : "National ID Validator Error",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الرقم القومي غير صالح"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The National Number Is Invalid"
+          }
+        }
+      }
+    },
+    "The Phone Number Is Invalid" : {
+      "comment" : "Phone Number Validator Error",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "رقم الهاتف غير صالح"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The Phone Number Is Invalid"
+          }
+        }
+      }
+    },
+    "This Field Is Required" : {
+      "comment" : "Required Validator Error",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "هذا الحقل مطلوب"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This Field Is Required"
+          }
+        }
+      }
+    },
+    "Today" : {
+      "comment" : "Date Picker Today Button Title",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اليوم"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Today"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

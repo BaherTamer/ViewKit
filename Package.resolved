@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "swiftsafeui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/BaherTamer/SwiftSafeUI.git",
+      "state" : {
+        "revision" : "6baf8f6a4e951ab210a6cc8d80e728c36ea75cb1",
+        "version" : "1.1.0"
+      }
+    }
+  ],
+  "version" : 2
+}
