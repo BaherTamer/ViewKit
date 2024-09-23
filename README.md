@@ -46,6 +46,16 @@ ViewKitConfig.shared.placeholderImage = Image(.placeholder)
 
 <br/>
 
+## 🛡️ SwiftSafeUI Integration
+
+**ViewKit** uses **SwiftSafeUI** to ensure compatibility across iOS versions by handling `SwiftUI` deprecations. It automatically provides alternatives for deprecated features, ensuring **ViewKit** components work seamlessly across different iOS versions.
+
+In addition, developers can also directly use **SwiftSafeUI** functions and modifiers from **ViewKit** to manage deprecations in their own `SwiftUI` views.
+
+For more details, visit the [SwiftSafeUI GitHub repository](https://github.com/BaherTamer/SwiftSafeUI).
+
+<br/>
+
 ## 📜 Explore Components
 For a detailed overview of all the components, modifiers, and extensions provided in this package, please visit the [Wiki](https://github.com/BaherTamer/ViewKit/wiki).
 
