@@ -44,6 +44,8 @@ ViewKitConfig.shared.appTintColor = .blue
 ViewKitConfig.shared.placeholderImage = Image(.placeholder)
 ```
 
+<br/>
+
 ## 📜 Explore Components
 For a detailed overview of all the components, modifiers, and extensions provided in this package, please visit the [Wiki](https://github.com/BaherTamer/ViewKit/wiki).
 
