@@ -1,5 +1,5 @@
 //
-//  CustomTextField.swift
+//  InputField.swift
 //  ViewKit
 //
 //  Created by Baher Tamer on 20/09/2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public struct CustomTextField: View {
+public struct InputField: View {
     // MARK: - Inputs
     @Binding private var text: String
     @Binding private var isSecure: Bool
@@ -22,7 +22,7 @@ public struct CustomTextField: View {
     
     // MARK: - Life Cycle
     ///
-    /// Creates a `CustomTextField` with a non localized placeholder.
+    /// Creates a `InputField` with a non localized placeholder.
     ///
     /// A customizable text field that supports validation, secure input, and optional placeholders.
     ///
@@ -33,6 +33,19 @@ public struct CustomTextField: View {
     ///   - validator: An optional ``ValidationType`` to be used for input validation.
     ///   - onChangeValidation: A closure that is called with an optional ``ValidationError`` when the text changes.
     ///   - onEndValidation: A closure that is called with an optional ``ValidationError`` when the user ends editing the field.
+    ///
+    /// ## Example
+    /// ``` swift
+    /// InputField(
+    ///     $email,
+    ///     placeholder: "Enter your email",
+    ///     validator: .email,
+    ///     onChangeValidation: { error in
+    ///         // Display Error...
+    ///     }
+    /// )
+    /// .keyboardType(.emailAddress)
+    /// ```
     ///
     public init(
         _ text: Binding<String>,
@@ -52,7 +65,7 @@ public struct CustomTextField: View {
     }
     
     ///
-    /// Creates a CustomTextField with a localized placeholder.
+    /// Creates a `InputField` with a localized placeholder.
     ///
     /// A customizable text field that supports validation, secure input, and optional placeholders.
     ///
@@ -63,6 +76,20 @@ public struct CustomTextField: View {
     ///   - validator: An optional ``ValidationType`` to be used for input validation.
     ///   - onChangeValidation: A closure that is called with an optional ``ValidationError`` when the text changes.
     ///   - onEndValidation: A closure that is called with an optional ``ValidationError`` when the user ends editing the field.
+    ///
+    /// ## Example
+    /// ``` swift
+    /// InputField(
+    ///     $password,
+    ///     isSecure: $isSecure,
+    ///     localizedPlaceholder: "Enter your password",
+    ///     validator: .password,
+    ///     onEndValidation: { error in
+    ///         // Display Error...
+    ///     }
+    /// )
+    /// .font(.body.bold())
+    /// ```
     ///
     public init(
         _ text: Binding<String>,
@@ -108,7 +135,7 @@ public struct CustomTextField: View {
 }
 
 // MARK: - Components
-extension CustomTextField {
+extension InputField {
     @ViewBuilder
     private var inputField: some View {
         if let localizedPlaceholder {

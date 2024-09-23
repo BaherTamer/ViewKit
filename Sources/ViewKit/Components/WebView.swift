@@ -18,6 +18,13 @@ public struct WebView: UIViewRepresentable {
     /// - Parameters:
     ///   - urlString: A `String` representing the URL of the web page to be loaded.
     ///
+    /// ## Example
+    ///  ``` swift
+    ///  NavigationView {
+    ///      WebView(urlString: "https://www.example.com")
+    ///  }
+    ///  ```
+    ///
     public init(urlString: String) {
         self.urlString = urlString
     }

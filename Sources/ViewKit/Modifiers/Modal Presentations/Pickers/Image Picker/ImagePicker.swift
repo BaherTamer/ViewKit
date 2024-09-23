@@ -39,7 +39,10 @@ extension View {
     /// }
     /// ```
     ///
-    public func imagePicker(isPresented: Binding<Bool>, image: Binding<UIImage?>) -> some View {
+    public func imagePicker(
+        isPresented: Binding<Bool>,
+        image: Binding<UIImage?>
+    ) -> some View {
         modifier(
             ImagePicker(
                 isPresented: isPresented,

@@ -40,13 +40,29 @@ where Data: RandomAccessCollection,
     ///
     /// Creates a `Carousel` with the specified data, identifier key path, and content view for each element.
     ///
-    /// A `SwiftUI` view that presents a horizontally scrollable collection of items with optional indicators to show the current selection.
+    /// A `SwiftUI` view that presents a horizontally auto scrollable collection of items with optional indicators to show the current selection.
     ///
     /// - Parameters:
     ///   - data: A collection of elements to be displayed in the carousel.
     ///   - id: A key path for identifying elements in the data.
     ///   - showsIndicators: A Boolean indicating if indicators should be shown. Default is `true`.
     ///   - content: A closure that produces a view for each element in the data.
+    ///
+    /// ## Example:
+    /// ``` swift
+    /// struct ContentView: View {
+    ///     let items = ["Item 1", "Item 2", "Item 3"]
+    ///
+    ///     var body: some View {
+    ///         Carousel(items, id: \.self) { item in
+    ///             Text(item)
+    ///                 .frame(maxWidth: .infinity, maxHeight: 200)
+    ///                 .background(.blue)
+    ///                 .roundedCorners(10)
+    ///         }
+    ///     }
+    /// }
+    /// ```
     ///
     public init(
         _ data: Data,
@@ -65,13 +81,33 @@ where Data: RandomAccessCollection,
     ///
     /// Creates a `Carousel` with the specified data, identifier key path, content view, and a custom indicator view for each element.
     ///
-    /// A `SwiftUI` view that presents a horizontally scrollable collection of items with optional indicators to show the current selection.
+    /// A `SwiftUI` view that presents a horizontally auto scrollable collection of items with optional indicators to show the current selection.
     ///
     /// - Parameters:
     ///   - data: A collection of elements to be displayed in the carousel.
     ///   - id: A key path for identifying elements in the data.
     ///   - content: A closure that produces a view for each element in the data.
     ///   - indicator: A closure that produces a custom indicator view for each element, taking the data element and a `Bool` indicating if it’s the current index.
+    ///
+    /// ## Example:
+    /// ``` swift
+    /// struct ContentView: View {
+    ///     let items = ["Item 1", "Item 2", "Item 3"]
+    ///
+    ///     var body: some View {
+    ///         Carousel(items, id: \.self) { item in
+    ///             Text(item)
+    ///                 .frame(maxWidth: .infinity, maxHeight: 200)
+    ///                 .background(.blue)
+    ///                 .roundedCorners(10)
+    ///         } indicator: { item, isActive in
+    ///             Capsule()
+    ///                 .fill(.blue.opacity(isSelected ? 1 : 0.3))
+    ///                 .frame(width: isSelected ? 24 : 8, height: 8)
+    ///         }
+    ///     }
+    /// }
+    /// ```
     ///
     public init(
         _ data: Data,

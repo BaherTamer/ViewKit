@@ -29,7 +29,19 @@ public struct CachedAsyncImage: View {
     ///   - urlString: An optional `String` representing the URL of the image to be loaded.
     ///   - contentMode: The `ContentMode` that defines how the image is scaled and positioned within it's frame.
     ///
-    public init(urlString: String?, contentMode: ContentMode) {
+    /// ``` swift
+    /// CachedAsyncImage(
+    ///     urlString: "https://www.example.com/image.png",
+    ///     contentMode: .fit
+    /// )
+    /// .frame(maxWidth: 400, maxHeight: 250)
+    /// .clipped()
+    /// ```
+    ///
+    public init(
+        urlString: String?,
+        contentMode: ContentMode
+    ) {
         self.urlString = urlString
         self.contentMode = contentMode
     }
