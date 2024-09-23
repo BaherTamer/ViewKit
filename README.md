@@ -54,7 +54,7 @@ The wiki includes documentation, examples, and usage instructions for each compo
 <br/>
 
 ## 🧑‍💻 Contributing
-**We encourage contributions! When adding new components, please follow these guidelines:**
+**When adding new components, please follow these guidelines:**
 
 1. **Documentation**: Every component must be documented with clear examples on how to use it.
 2. **Wiki:** Update the wiki with usage instructions and examples for the new component.
