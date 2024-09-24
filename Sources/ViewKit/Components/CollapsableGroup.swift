@@ -15,6 +15,13 @@ public struct CollapsableGroup<Header: View, Content: View>: View {
     private let header: Header
     private let content: Content
     
+    // MARK: - Variables
+    @Namespace private var namespace
+    private let springAnimation = Animation.spring(
+        response: 0.6,
+        dampingFraction: 0.8
+    )
+    
     // MARK: - Life Cycle
     public init(
         isExpanded: Binding<Bool>,
@@ -34,14 +41,19 @@ public struct CollapsableGroup<Header: View, Content: View>: View {
     public var body: some View {
         VStack(spacing: spacing) {
             headerView
-            contentView
+            
+            if isExpanded {
+                contentView
+            }
         }
     }
     
     // MARK: - Private Helpers
     private func toggleExpanded() {
         if isHeaderTappable {
-            isExpanded.toggle()
+            withAnimation(springAnimation) {
+                isExpanded.toggle()
+            }
         }
     }
 }
@@ -55,10 +67,12 @@ extension CollapsableGroup {
             )
     }
     
-    @ViewBuilder
     private var contentView: some View {
-        if isExpanded {
-            content
-        }
+        content
+            .matchedGeometryEffect(id: "view", in: namespace)
+            .mask(
+                Rectangle()
+                    .matchedGeometryEffect(id: "mask", in: namespace)
+            )
     }
 }
