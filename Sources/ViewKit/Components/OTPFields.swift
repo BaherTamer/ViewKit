@@ -18,6 +18,44 @@ public struct OTPFields<Content: View>: View {
     @FocusState private var focusedIndex : Int?
     
     // MARK: - Life Cycle
+    ///
+    /// Displays a series of customizable input fields for entering a One-Time Password (OTP).
+    ///
+    /// - Parameters:
+    ///   - pins: A binding to an array of strings representing the individual pins for the OTP fields. It is important that this array is initialized with empty strings to ensure proper count behavior, as the view relies on the number of elements in this array to determine how many fields to display.
+    ///   - spacing: The spacing between the OTP fields. Default value is `24`.
+    ///   - content: A closure that produces the content for each OTP field. It takes two parameters:
+    ///     - An `Int` representing the index of the current field.
+    ///     - A `Bool` indicating whether the field is currently focused.
+    ///   - onSubmit: A closure that is called when all values are added.
+    ///
+    /// ## Example:
+    /// ``` swift
+    /// struct ContentView: View {
+    ///     @State private var pins = [String](repeating: "", count: 4)
+    ///
+    ///     var body: some View {
+    ///         OTPFields(pins: $pins, spacing: 21) { index, isFocused in
+    ///             TextField(text: $pins[index], label: {})
+    ///                 .font(.title3.bold())
+    ///                 .foregroundStyle(.blue)
+    ///                 .frame(width: 74, height: 84)
+    ///                 .roundedBorder(radius: 20, style: Color.secondary)
+    ///                 .overlay {
+    ///                     Rectangle()
+    ///                         .fill(.secondary)
+    ///                         .frame(height: 1)
+    ///                         .padding(.horizontal, 20)
+    ///                         .opacity(pins[index].isEmpty ? 1 : 0)
+    ///                 }
+    ///         } onSubmit: {
+    ///             // All values are added...
+    ///         }
+    ///         .padding()
+    ///     }
+    /// }
+    /// ```
+    ///
     public init(
         pins: Binding<[String]>,
         spacing: CGFloat = 24,
