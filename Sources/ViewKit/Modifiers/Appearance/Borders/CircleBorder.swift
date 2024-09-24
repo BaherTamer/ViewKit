@@ -9,7 +9,7 @@ import SwiftUI
 
 extension View {
     ///
-    /// Adds a circle-shaped border around a view with a specified style and line width.
+    /// Adds an inner circle-shaped border around a view with a specified style and line width.
     ///
     /// This function allows you to apply a circle-shaped border to any view using a customizable `ShapeStyle` for the border color and appearance. You can also specify the line width of the border.
     ///
@@ -54,7 +54,7 @@ fileprivate struct CircleBorder<Style: ShapeStyle>: ViewModifier {
             .clipShape(.circle)
             .overlay {
                 Circle()
-                    .stroke(style, lineWidth: lineWidth)
+                    .strokeBorder(style, lineWidth: lineWidth)
             }
     }
 }

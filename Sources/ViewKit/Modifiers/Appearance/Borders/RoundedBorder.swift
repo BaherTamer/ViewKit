@@ -9,7 +9,7 @@ import SwiftUI
 
 extension View {
     ///
-    /// Adds a rounded border around a view with a specified radius, style and line width.
+    /// Adds an inner rounded border around a view with a specified radius, style and line width.
     ///
     /// This function allows you to apply a rounded border to any view using a customizable `ShapeStyle` for the border color and appearance. You can also specify the line width of the border.
     ///
@@ -60,7 +60,7 @@ fileprivate struct RoundedBorder<Style: ShapeStyle>: ViewModifier {
             )
             .overlay {
                 RoundedRectangle(cornerRadius: radius)
-                    .stroke(style, lineWidth: lineWidth)
+                    .strokeBorder(style, lineWidth: lineWidth)
             }
     }
 }
