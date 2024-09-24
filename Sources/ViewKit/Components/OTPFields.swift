@@ -41,7 +41,7 @@ public struct OTPFields<Content: View>: View {
     ///                 .foregroundStyle(.blue)
     ///                 .frame(width: 74, height: 84)
     ///                 .roundedBorder(radius: 20, style: Color.secondary)
-    ///                 .overlay {
+    ///                 .background {
     ///                     Rectangle()
     ///                         .fill(.secondary)
     ///                         .frame(height: 1)
