@@ -68,7 +68,6 @@ where Data: RandomAccessCollection,
         _ data: Data,
         id: KeyPath<Data.Element, Id>,
         showsIndicators: Bool = true,
-        // FIXME: Avoid using `@escaping`
         @ViewBuilder content: @escaping (Data.Element) -> Content
     ) where Indicator == EmptyView {
         self.data = data
@@ -112,7 +111,6 @@ where Data: RandomAccessCollection,
     public init(
         _ data: Data,
         id: KeyPath<Data.Element, Id>,
-        // FIXME: Avoid using `@escaping`
         @ViewBuilder content: @escaping (Data.Element) -> Content,
         @ViewBuilder indicator: @escaping (Data.Element, Bool) -> Indicator
     ) {

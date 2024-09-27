@@ -5,6 +5,7 @@
 //  Created by Baher Tamer on 14/09/2024.
 //
 
+import OSLog
 import PhotosUI
 import SwiftSafeUI
 import SwiftUI
@@ -29,6 +30,7 @@ fileprivate struct AppPhotosPicker: ViewModifier {
     
     // MARK: - Variables
     @State private var selectedItem: PhotosPickerItem? = nil
+    private let logger = Logger.photosPicker
     
     // MARK: - Body
     func body(content: Content) -> some View {
@@ -50,8 +52,7 @@ fileprivate struct AppPhotosPicker: ViewModifier {
                 case .success(let data):
                     setImage(data: data)
                 case .failure(let error):
-                    // TODO: - Add Logger
-                    print("Error loading image: \(error)")
+                    logger.error("Failed to load image data from photos picker: \(error)")
                 }
             }
         }
