@@ -5,6 +5,7 @@
 
 ## 📝 Requirements
 - Xcode 16.0+
+- Swift 5.10+
 - iOS 15.0+
 
 <br/>
