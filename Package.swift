@@ -19,7 +19,7 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/BaherTamer/SwiftSafeUI.git",
-            .upToNextMajor(from: "1.1.0")
+            .upToNextMajor(from: "1.2.0")
         )
     ],
     targets: [
