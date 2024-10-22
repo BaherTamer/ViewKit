@@ -54,8 +54,10 @@ public struct HighlightedText: View {
     public var body: some View {
         Text(attributedString)
     }
-    
-    // MARK: - Private Helpers
+}
+
+// MARK: - Private Helpers
+fileprivate extension HighlightedText {
     private var attributedString: AttributedString {
         var attributedString = try! AttributedString(markdown: "")
         var segments: [String.SubSequence]

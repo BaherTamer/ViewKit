@@ -33,7 +33,7 @@ extension View {
     ///
     /// - Returns: A modified view that is either hidden or shown.
     ///
-    func hide(_ isHidden: Bool) -> some View {
+    public func hide(_ isHidden: Bool) -> some View {
         modifier(
             HideViewModifier(isHidden: isHidden)
         )
@@ -41,8 +41,10 @@ extension View {
 }
 
 fileprivate struct HideViewModifier: ViewModifier {
+    // MARK: - Inputs
     let isHidden: Bool
     
+    // MARK: - Body
     func body(content: Content) -> some View {
         if isHidden {
             EmptyView()
