@@ -1,13 +1,13 @@
 {
-  "originHash" : "2719e0e1765018ad72fa11726f701440fa797bac300d4e9fd962b0b26bf0eadd",
+  "originHash" : "3876e9428830769e273122a17d2efa69a6020f737fb13991a0f6165881a27e44",
   "pins" : [
     {
       "identity" : "swiftsafeui",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/BaherTamer/SwiftSafeUI.git",
       "state" : {
-        "revision" : "c2447cee0573161bba2d43b90aebc37e7b154e82",
-        "version" : "1.2.0"
+        "revision" : "b3440b798319a1e6e46de65b1bb5f875af817b41",
+        "version" : "1.3.0"
       }
     }
   ],

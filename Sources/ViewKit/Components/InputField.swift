@@ -5,6 +5,7 @@
 //  Created by Baher Tamer on 20/09/2024.
 //
 
+import Combine
 import SwiftUI
 
 public struct InputField: View {
@@ -18,7 +19,8 @@ public struct InputField: View {
     private let onEndValidation: ((ValidationError?) -> Void)?
     
     // MARK: - Variables
-    @FocusState private var isFocused: Bool
+    @State private var typingCancellable: AnyCancellable?
+    @State private var onTextChange = PassthroughSubject<String, Never>()
     
     // MARK: - Life Cycle
     ///
@@ -111,23 +113,45 @@ public struct InputField: View {
     // MARK: - Body
     public var body: some View {
         inputField
-            .focused($isFocused)
-            .safeOnChange(text, perform: didChangeText)
-            .safeOnChange(isFocused) { _, newValue in
-                didEndEditing(newValue)
-            }
+            .onAppear(perform: debounce)
+            .onDisappear(perform: cancel)
+            .safeOnChange(
+                text,
+                perform: didChangeText
+            )
     }
     
     // MARK: - Private Helpers
+    private func debounce() {
+        let seconds = ViewKitConfig.shared.inputFieldOnEndValidationDelay
+        typingCancellable = onTextChange
+            .debounce(
+                for: .seconds(seconds),
+                scheduler: RunLoop.main
+            )
+            .sink(receiveValue: didEndEditing)
+    }
+    
+    private func send(_ value: String) {
+        onTextChange
+            .send(value)
+    }
+    
+    private func cancel() {
+        typingCancellable?
+            .cancel()
+    }
+    
     private func didChangeText(_ oldValue: String, _ newValue: String) {
+        send(newValue)
         if let validationType, let onChangeValidation {
             let error = validationType.validator.validate(text)
             onChangeValidation(error)
         }
     }
     
-    private func didEndEditing(_ state: Bool) {
-        if !state, let validationType, let onEndValidation {
+    private func didEndEditing(_ value: String) {
+        if let validationType, let onEndValidation {
             let error = validationType.validator.validate(text)
             onEndValidation(error)
         }
