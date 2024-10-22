@@ -28,7 +28,7 @@ Add a dependency in your `Package.swift`
 
 ``` swift
 dependencies: [
-    .package(url: "https://github.com/BaherTamer/ViewKit.git", .upToNextMajor(from: "1.1.0"))
+    .package(url: "https://github.com/BaherTamer/ViewKit.git", .upToNextMajor(from: "1.2.0"))
 ]
 ```
 
