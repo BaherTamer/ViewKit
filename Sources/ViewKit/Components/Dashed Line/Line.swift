@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import SwiftSafeUICore
+import SwiftSafeUI
 
 struct Line: Shape {
     func path(in rect: CGRect) -> Path {

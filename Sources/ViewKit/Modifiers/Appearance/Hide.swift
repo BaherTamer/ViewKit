@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import SwiftSafeUICore
+import SwiftSafeUI
 
 extension View {
     ///
