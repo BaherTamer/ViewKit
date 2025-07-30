@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftSafeUI
 
 struct ShareView: UIViewControllerRepresentable {
     // MARK: - Inputs

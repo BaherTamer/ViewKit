@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftSafeUI
 import WebKit
 
 public struct WebView: UIViewRepresentable {

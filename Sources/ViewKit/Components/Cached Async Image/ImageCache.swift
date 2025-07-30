@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftSafeUI
 
 ///
 /// Caching image mechanisms:.

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftSafeUI
 
 extension View {
     /// A Boolean value that indicates whether the current user interface layout direction is right-to-left.

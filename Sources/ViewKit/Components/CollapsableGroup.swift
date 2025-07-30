@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftSafeUI
 
 public struct CollapsableGroup<Header: View, Content: View>: View {
     // MARK: - Inputs

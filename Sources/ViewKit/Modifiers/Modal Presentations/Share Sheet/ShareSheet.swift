@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftSafeUI
 
 extension View {
     /// Presents a share sheet for sharing items.

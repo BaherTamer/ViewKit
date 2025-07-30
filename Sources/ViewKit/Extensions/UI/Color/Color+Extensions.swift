@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftSafeUI
 
 extension Color {
     /// Converts a SwiftUI `Color` to a `UIColor`.

@@ -7,6 +7,7 @@
 
 import PhotosUI
 import SwiftUI
+import SwiftSafeUI
 
 struct UIImagePicker: UIViewControllerRepresentable {
     @Binding var image: UIImage?

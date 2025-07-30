@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftSafeUI
 
 extension View {
     /// Presents a date picker in a bottom popup, allowing users to select a date.

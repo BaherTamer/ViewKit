@@ -5,7 +5,8 @@
 //  Created by Baher Tamer on 23/10/2024.
 //
 
-import SwiftUICore
+import SwiftUI
+import SwiftSafeUICore
 
 struct Line: Shape {
     func path(in rect: CGRect) -> Path {

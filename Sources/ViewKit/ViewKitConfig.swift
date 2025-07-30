@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftSafeUI
 
 public final class ViewKitConfig {
     // MARK: - Singleton

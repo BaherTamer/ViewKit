@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftSafeUI
 
 public struct Carousel<Data, Id, Content, Indicator>: View
 where Data: RandomAccessCollection,

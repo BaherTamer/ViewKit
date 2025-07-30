@@ -5,7 +5,8 @@
 //  Created by Baher Tamer on 13/10/2024.
 //
 
-import SwiftUICore
+import SwiftUI
+import SwiftSafeUICore
 
 extension View {
     ///

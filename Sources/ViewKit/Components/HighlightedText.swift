@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftSafeUI
 
 public struct HighlightedText: View {
     // MARK: - Inputs
